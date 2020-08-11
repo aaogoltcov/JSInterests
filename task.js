@@ -39,6 +39,7 @@ function setParentsChecked(node, tagName, isNeighbourChecked, isChecked) {
     } catch {};
 };
 
+// fill parents base in children
 function setParentFull(array) {
     array.forEach(function (item) {
         let checkBoxList = Array.from(item.closest('li').querySelectorAll('input'));
@@ -52,6 +53,7 @@ function setParentFull(array) {
     });
 };
 
+// check neighbours status
 function isNeighbourChecked(neighbourArray) {
     for (let neighbour in neighbourArray) {
         if (neighbourArray[neighbour].checked) {
